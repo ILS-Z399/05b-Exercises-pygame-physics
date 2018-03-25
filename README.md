@@ -8,6 +8,8 @@ There are three exercise files in this repository. Follow the instructions in ea
 
 Some of the exercises require you to interpret what is going on. Feel free to explore other variations until you can come up with a reasonable explanation. 
 
+The repository includes two graphics files, adventurer.png and frameGuide.png. adventurer.png is a sprite sheet (used with exercise 3) and frameGuide.png is a breakdown of the frames in each animation sequence. They were created by created by [MoikMellah](https://opengameart.org/content/mv-platformer-male-32x64) and were provided under a Public Domain license.
+
 As with your assignments, please edit the LICENSE file (replace the [year] [fullname] with the current year and your name), and edit this file to describe what your code does.
 
 The following may be helpful to get you started:

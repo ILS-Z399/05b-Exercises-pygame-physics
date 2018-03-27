@@ -1,6 +1,6 @@
 # 05b-Exercises-pygame-physics
 
-Here are some exercises to help you learn about how 2D game physics might be implemented.
+Here are some exercises to help you learn about how 2D game physics might be implemented. One exercise gives you a taste of how you might implement music and sound effects in a game.
 
 This assumes that you have Pygame installed.
 
@@ -42,7 +42,7 @@ The following may be helpful to get you started:
 * You can find some [nice colors here](https://yeun.github.io/open-color/) and their [RGB recipes here](https://yeun.github.io/open-color/ingredients.html)
 * An open-source repository of graphics you can use in your projects is available at [opengameart.org](https://opengameart.org)
 * A collection of creative-commons licensed music is available at [freemusicarchive.org](http://freemusicarchive.org/)
-* A collection of creative-commons licensed sound effects can be found at [freesound.org/](https://freesound.org/) (registration required)
+* A collection of creative-commons licensed sound effects can be found at [freesound.org](https://freesound.org/) (registration required)
 
 ---
 

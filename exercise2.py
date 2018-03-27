@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''
 
-For every line in the collide method (lines 58-84), please add a comment describing what it does. 
+For every line in the collide method (lines 58-91), please add a comment describing what it does. 
 
 Try to describe each line within the context of the program as a whole, rather than just mechanically
 
@@ -55,9 +55,16 @@ class Ball(pygame.sprite.Sprite):
 			dy *= -1
 		self.direction = (dx,dy)
 	
-	def collide(self, other_object):
+	def collide(self, other_object):	
+		'''
+		
+		Checks to see if the object has collided with another object. Assumes that each collision will be calculated pairwise.
+		If there has been a collision, and the objects are still moving toward each other, the direction attribute of both objects is updated
+		
+		
+		'''
 		(dx,dy) = self.direction				# the x and y components of the direction
-		(odx,ody) = other_object.direction
+		(odx,ody) = other_object.direction		# the x and y components of the other object's direction
 		(cx,cy) = self.rect.center
 		(ocx,ocy) = other_object.rect.center
 		radius = self.rect.width/2
@@ -68,12 +75,12 @@ class Ball(pygame.sprite.Sprite):
 			distance = 0.1
 		combined_distance = (radius+oradius)
 		if distance <= combined_distance:	#collision
-			normal = ((cx-ocx)/distance,(cy-ocy)/distance)
-			velocity_delta = ((odx-dx),(ody-dy))
+			normal = ((cx-ocx)/distance,(cy-ocy)/distance)	# a vector tangent to the plane of collision
+			velocity_delta = ((odx-dx),(ody-dy))	#the relative difference between the speed of the two objects
 			(nx,ny) = normal
 			(vdx,vdy) = velocity_delta
 			dot_product = nx*vdx + ny*vdy
-			if dot_product >= 0:
+			if dot_product >= 0:	#check if the objects are moving toward each other
 				impulse_strength = dot_product * (self.mass / other_object.mass)
 				impulse = (ix,iy) = (impulse_strength * nx, impulse_strength * ny)
 				dx += ix * (other_object.mass/self.mass)

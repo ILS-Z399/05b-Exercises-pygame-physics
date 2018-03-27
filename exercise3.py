@@ -91,7 +91,11 @@ def main():
 				pygame.quit()
 				sys.exit(0)
 
-		keys = pygame.key.get_pressed()
+		keys = pygame.key.get_pressed()	
+		'''
+		Checking for a keypress independent of the events allows us to poll the keyboard every cycle (60 FPS). 
+		It requires the key to be currently pressed, but it also allows us to deal with keys being held down
+		'''
 		if keys[pygame.K_UP]:
 			runner.jump()
 

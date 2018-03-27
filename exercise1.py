@@ -40,7 +40,7 @@ class Ball(pygame.sprite.Sprite):
 
 	def update(self):
 		(dx,dy) = self.direction	# get the current velocity
-		self.rect.x += dx		# move the sprite
+		self.rect.x += dx		# move the sprite horizontally
 		self.rect.y += dy
 
 		dy = dy + gravity
@@ -61,7 +61,7 @@ class Ball(pygame.sprite.Sprite):
 			self.rect.bottom = HEIGHT
 			dx = dx * -1 * (1.0-friction)
 			dy = dy * -1 * (1.0-friction)
-			if abs(dy) < 1:			# keep it from bouncing forever
+			if abs(dy) < 1:			# a hack to keep it from bouncing forever
 				dy = 0
 		self.direction = (dx,dy)
 

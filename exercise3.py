@@ -5,9 +5,7 @@ The character is walking (running?) based on animations from the "adventurer.png
 
 When the character jumps (when the player presses the up button), use the jumping animation instead of the walking animation. You will need to change the update() method.
 
-Add a scrolling background image, including a floor.
-
-For extra credit, add something for him to jump over (and consequences for not jumping)
+For extra credit, add a scrolling background image, including a floor. For extra, extra credit, add something for him to jump over (and consequences for not jumping)
 
 The animation was created by MoikMellah (https://opengameart.org/content/mv-platformer-male-32x64) and is provided under a Public Domain license.
 
@@ -30,7 +28,7 @@ gravity = 0.6
 class Runner(pygame.sprite.Sprite):
 	def __init__(self, img, position):
 		pygame.sprite.Sprite.__init__(self)
-		self.sheet = pygame.image.load(os.path.join('.', img)).convert()	# load the image from the current folder and convert it so pygame.image can use it
+		self.sheet = pygame.image.load(os.path.join('img', img)).convert()	# load the image from the current folder and convert it so pygame.image can use it
 		(self.width,self.height) = img_size			# the width and height of the image on the sprite sheet
 		(self.margin_x,self.margin_y) = img_margin	# the space between the images on the sprite sheet
 
